@@ -269,29 +269,29 @@ function generateProgressSectionString() {
   if (currentQuestion === 10) {
     large = 'large';
   }
-  return `       <div class="progress" data-label="${percentageCompleted}% of the Questions Completed">
-  <span class="value" style="width: ${percentageCompleted}%"></span>
-</div>
-        <div class="progress-text">
-          <ul>
-            <li>
-              <span class="progress-name">${name}'s</span>
-              <span class="progress-name-text">Progress</span
-            </li>
-            <li>
-              <span class="span-label">Question:</span>
-              <div class="fraction ${large}">
-                <span class="fractop">${currentQuestion}</span>&frasl;<span class="fracbot">10</span>
-              </div>
-            </li>
-            <li>
-              <span class="span-label">Correct:</span>
-              <div class="fraction">
-                <span class="fractop">${correct}</span>&frasl;<span class="fracbot">10</span>
-              </div>
-            </li>
-          </ul>
-        </div>`;
+  return `<div class="progress" data-label="${percentageCompleted}% of the Questions Completed">
+            <span class="value" style="width: ${percentageCompleted}%"></span>
+          </div>
+          <div class="progress-text">
+            <ul>
+              <li>
+                <span class="progress-name">${name}'s</span>
+                <span class="progress-name-text">Progress</span
+              </li>
+              <li>
+                <span class="span-label">Question:</span>
+                <div class="fraction ${large}">
+                  <span class="fractop">${currentQuestion}</span>&frasl;<span class="fracbot">10</span>
+                </div>
+              </li>
+              <li>
+                <span class="span-label">Correct:</span>
+                <div class="fraction">
+                  <span class="fractop">${correct}</span>&frasl;<span class="fracbot">10</span>
+                </div>
+              </li>
+            </ul>
+          </div>`;
 }
 
 
