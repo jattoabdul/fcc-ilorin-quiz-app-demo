@@ -43,63 +43,80 @@
   <section class="main container">
     <!-- Intro & Registration Form -->
     <div class="js-start" data-page-index="0">
-      <h2>Introduction</h2>
-      <hr class="line">
-      <div class="img-content">
-        <!-- <img src="https://www.nbc.com/sites/nbcunbc/files/files/styles/640x360/public/images/2016/1/19/MDot-TheOffice-640x360-MP.jpg?itok=Gn98SGYE" alt="The Office Crew"> -->
+        <h2>Introduction</h2>
+        <div class="name-content">
+          <p>Let's see how serious you are in joining us!</p>
+          <form id="js-start-form">
+            <div class="textinput">
+              <input id="firstname" class="js-first-name-input" type="text" name="first" required>
+              <label for="firstname">First Name</label>
+            </div>
+            <div class="textinput">
+              <input id="lastname" class="js-last-name-input" type="text" name="last" required>
+              <label for="lastname">Last Name</label>
+            </div>
+            <button type="submit" class="btn btn-primary js-start-button">Start Interview</button>
+          </form>
+        </div>
       </div>
-      <div class="name-content">
-        <p>Let's see how serious you are in joining us!</p>
-        <form id="js-start-form">
-          <div class="textinput">
-            <input id="firstname" class="js-first-name-input" type="text" name="first" required>
-            <label for="firstname">First Name</label>
-          </div>
-          <div class="textinput">
-            <input id="lastname" class="js-last-name-input" type="text" name="last" required>
-            <label for="lastname">Last Name</label>
-          </div>
-          <button type="submit" class="js-start-button">Start Interview</button>
-        </form>
-      </div>
-    </div>
     <!-- Question  & Answers -->
     <div class="js-question">
-      <h2>Question Number 1(current question)</h2>
-      <h3>Question Text</h3>
-      <div class="feedback-message">
-
+      <h3><span class="question-number">1. </span>Question Text</h3>
+      <div class="feedback-message success">
+        Correct answer!
       </div>
       <form id="js-question-form">
         <ul>
           <li class="js-choices">
-            <input type="radio" class="js-radio" id="answer1"
+            <div><input type="radio" class="js-radio" id="answer1"
               name="answer" value="choice1" data-answer-index="1"
               required="required">
               <label for="answer1">Choice1</label>
+              </div>
+
+              <div><input type="radio" class="js-radio" id="answer2"
+              name="answer" value="choice2" data-answer-index="2"
+              required="required">
+              <label for="answer2">Choice2</label>
+              </div>
+
+              <div><input type="radio" class="js-radio" id="answer3"
+              name="answer" value="choice3" data-answer-index="3"
+              required="required">
+              <label for="answer3">Choice3</label>
+              </div>
+
+              <div><input type="radio" class="js-radio" id="answer4"
+              name="answer" value="choice4" data-answer-index="4"
+              required="required">
+              <label for="answer4">Choice4</label>
+              </div>
           </li>
         </ul>
       </form>
-      <button type="submit" class="js-question-button">Submit Answer</button>
+      <button type="submit" class="btn btn-primary js-question-button">Submit Answer</button>
     </div>
     <!-- Result & Review(feedback Message) -->
     <div class="js-result" data-page-index="0">
-      <h2>Results</h2>
+      <h5>Stats</h5>
       <div class="img-content">
         <!-- <img src="http://popgoestheweek.com/wp-content/uploads/2011/11/Dunder-Mifflin-Logo-Cast-the-office-28us-29-34267_1024_819.jpg" alt="Michael Scott of Dunder Mifflin Paper Company"> -->
-      <div class="feedback-message">
+      <div class="feedback-message failure">
         You have not done well enough
       </div>
       <form id="js-result-form">
-        <button type="submit" class="js-result-button">Try Again</button>
+        <button type="submit" class="btn btn-primary js-result-button">Try Again</button>
       </form>
       </div>
     </div>
-  </section>
-  <section class="progress-section container">
-    <!-- Progress / Results -->
-    <!-- progress bar -->
-    user firstname + lastname | question 2/10(total questions) | 1 correct answers out of 10(total question)
+    <div class="progress-section">
+      <!-- Progress / Results -->
+      <!-- progress bar -->
+      <div class="progress">
+          <div class="determinate" style="width: 20%"></div>
+        </div>
+        <div class="stats-text">Jatto Abdul: 2/10 questions | 1/10 correct answers</div>
+    </div>
   </section>
   <script src="js/jquery.min.js"></script>
   <script src="js/materialize.min.js"></script>

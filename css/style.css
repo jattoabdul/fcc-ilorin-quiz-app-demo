@@ -47,3 +47,84 @@ nav>.container {
 ul.social i.icon {
     margin-right: 1rem;
 }
+
+.js-start {
+    background-color: #fff;
+    padding: 32px;
+    margin: 20px auto;
+    left: 0;
+    top: 65px;
+    margin-top: 0px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+.textinput {
+    margin-top: 5px;
+}
+
+button.btn.btn-primary.js-start-button {
+    margin-top: 50px;
+}
+
+.question-number {
+    color: rgba(96, 125, 139, 0.84);
+}
+
+button.btn.btn-primary.js-result-button {
+    margin: 20px 0px;
+}
+
+.feedback-message.failure {
+    color: #FF9800;
+}
+
+.js-result {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 0px rgba(165, 164, 164, 0.68);
+}
+
+section.progress-section.container {
+    color: rgba(96, 125, 139, 0.84);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+li.js-choices {
+    padding: 2px 0px;
+    margin-left: 5px;
+}
+
+.js-question {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 0px rgba(165, 164, 164, 0.68);
+    display: inline-block;
+    width: 100%;
+}
+
+label {}
+
+.js-choices > div {
+    margin: 15px 0px;
+}
+
+.stats-text {
+    color: rgba(96, 125, 139, 0.84);
+}
+
+section.main.container {
+    margin: 20px auto;
+}
+
+.feedback-message.success {
+    color: #009688;
+}
+
+.progress-section {
+    margin-top: 50px;
+}
