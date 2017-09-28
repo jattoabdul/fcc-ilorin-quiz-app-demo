@@ -22,7 +22,10 @@
             </a>
             <ul class="right hide-on-med-and-down">
                 <li>
-                    <a href="https://github.com/jattoabdul/fcc-ilorin-quiz-app-demo" class="waves-effect waves-light" target="_blank"><i class="icon ion-social-github left"></i>Github</a>
+                    <a href="https://github.com/jattoabdul/fcc-ilorin-quiz-app-demo"
+                      class="waves-effect waves-light" target="_blank">
+                      <i class="icon ion-social-github left"></i>Github
+                    </a>
                 </li>
                 <li><a href="#!" class="waves-effect">Home</a></li>
                 <li><a href="#!">LeadersBoard</a></li>
@@ -38,10 +41,47 @@
         </div>
     </nav>
   <section class="main container">
-    <!-- Intro & Registration Form / Question  & Answers -->
+    <!-- Intro & Registration Form -->
+    <div class="js-start" data-page-index="0">
+
+    </div>
+    <!-- Question  & Answers -->
+    <div class="js-question">
+      <h2>Question Number 1(current question)</h2>
+      <h3>Question Text</h3>
+      <div class="feedback-message">
+
+      </div>
+      <form id="js-question-form">
+        <ul>
+          <li class="js-choices">
+            <input type="radio" class="js-radio" id="answer1"
+              name="answer" value="choice1" data-answer-index="1"
+              required="required">
+              <label for="answer1">Choice1</label>
+          </li>
+        </ul>
+      </form>
+      <button type="submit" class="js-question-button">Submit Answer</button>
+    </div>
+    <!-- Result & Review(feedback Message) -->
+    <div class="js-result" data-page-index="0">
+      <h2>Results</h2>
+      <div class="img-content">
+        <!-- <img src="http://popgoestheweek.com/wp-content/uploads/2011/11/Dunder-Mifflin-Logo-Cast-the-office-28us-29-34267_1024_819.jpg" alt="Michael Scott of Dunder Mifflin Paper Company"> -->
+      <div class="feedback-message">
+        You have not done well enough
+      </div>
+      <form id="js-result-form">
+        <button type="submit" class="js-result-button">Try Again</button>
+      </form>
+      </div>
+    </div>
   </section>
   <section class="progress-section container">
     <!-- Progress / Results -->
+    <!-- progress bar -->
+    user firstname + lastname | question 2/10(total questions) | 1 correct answers out of 10(total question)
   </section>
   <script src="js/jquery.min.js"></script>
   <script src="js/materialize.min.js"></script>
