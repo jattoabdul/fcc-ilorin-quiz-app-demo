@@ -1,51 +1,11 @@
 /*
-    Author: Ajala AbdulSamii Olalekan
-    Email: kgasta@gmail.com
-    Github: github.com/jalasem
-    Note: I have written some custom css here to help you through your design
+    Author: Aminujatto Abdulqahhar
+    Email: jattoade@gmail.com
+    Github: github.com/jattoabdul
 */
 
 nav>.container {
     width: 95%;
-}
-
-/*font size adjustments
-    in your html you can use them for icons and text
-    e.g <i class="icon ion-social-facebook x15"></i> to adjut the font-size of the icon to 1.5rem
-*/
-.x1 {
-    font-size: 1rem;
-}
-.x15 {
-    font-size: 1.5rem;
-}
-.x2 {
-    font-size: 2rem;
-}
-.x25 {
-    font-size: 2.5rem;
-}
-.x3 {
-    font-size: 3rem;
-}
-.x35 {
-    font-size: 3.5rem;
-}
-.x4 {
-    font-size: 4rem;
-}
-.x45 {
-    font-size: 4.5rem;
-}
-.x5 {
-    font-size: 5rem;
-}
-.x55 {
-    font-size: 5.5rem;
-}
-
-ul.social i.icon {
-    margin-right: 1rem;
 }
 
 .js-start {
@@ -72,10 +32,6 @@ button.btn.btn-primary.js-start-button {
 
 button.btn.btn-primary.js-result-button {
     margin: 20px 0px;
-}
-
-.feedback-message.failure {
-    color: #FF9800;
 }
 
 .js-result {
@@ -107,7 +63,17 @@ li.js-choices {
     width: 100%;
 }
 
-label {}
+.js-question .selected {
+    color: #007932;
+}
+
+.js-question .correct-select {
+    color: #009688;
+}
+
+.js-question .wrong-selected {
+    color: #FF9800;
+}
 
 .js-choices > div {
     margin: 15px 0px;
@@ -123,6 +89,34 @@ section.main.container {
 
 .feedback-message.success {
     color: #009688;
+}
+
+.feedback-message.failure {
+    color: #FF9800;
+}
+
+.feedback-message.warning {
+    color: #FFEE00;
+}
+
+.feedback-message.error {
+    color: #550303;
+}
+
+.success {
+    color: #009688;
+}
+
+.failure {
+    color: #FF9800;
+}
+
+.warning {
+    color: #FFEE00;
+}
+
+.error {
+    color: #550303;
 }
 
 .progress-section {

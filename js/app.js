@@ -161,32 +161,37 @@ function generateQuestionElement(questionIndex, currentPage) {
   const choices = QUESTIONS[questionIndex].choices;
   const answer = QUESTIONS[questionIndex].answer;
   
-  const htmlOne = `  <div class="js-question" data-page-index="${currentPage}" data-question-index="${questionIndex}">
-      <h2>Question ${currentPage}</h2>
-      <hr class="line">
-      <h3 class="question">${question}</h3>
-      <div class="feedback-message">
-      </div>
-      <form id="js-question-form">
-        <ul>`;
+  const htmlOne = `<div class="js-question"
+    data-page-index="${currentPage}"
+    data-question-index="${questionIndex}">
+    <h3 class="question"><span class="question-number">${currentPage} </span>${question}</h3>
+    <div class="feedback-message">
+    </div>
+    <form id="js-question-form">
+      <ul>`;
   let htmlTwo = ``;
   for (let i = 0; i < choices.length; i++) {
     if (i === 0) {
       htmlTwo += `<li class="js-choices">
-                <input type="radio" class="js-radio" id="answer${i}" name="answer" value="${choices[i]}" data-answer-index="${i}" required="required">
-                <label for="answer${i}">${choices[i]}</label>
-              </li>`;
+                    <div><input type="radio" class="js-radio" id="answer${i}"
+                      name="answer" value="${choices[i]}" data-answer-index="${i}"
+                      required="required">
+                      <label for="answer${i}">${choices[i]}</label>
+                    </div>
+                  </li>`;
     } else {
       htmlTwo += `<li class="js-choices">
-                <input type="radio" class="js-radio" id="answer${i}" name="answer" value="${choices[i]}" data-answer-index="${i}">
-                <label for="answer${i}">${choices[i]}</label>
-              </li>`;
+                    <div><input type="radio" class="js-radio" id="answer${i}"
+                      name="answer" value="${choices[i]}" data-answer-index="${i}">
+                      <label for="answer${i}">${choices[i]}</label>
+                    </div>
+                  </li>`;
       }
   }
   const htmlThree = `</ul>
-      </form>
-      <button type="submit" class="js-question-button">Submit Answer</button>
-    </div>`;
+                    </form>
+                    <button type="submit" class="btn btn-primary js-question-button">Submit Answer</button>
+                  </div>`;
   return htmlOne + htmlTwo + htmlThree;
 }
 
@@ -203,26 +208,24 @@ function generateQuizQuestionSectionString() {
 
 function generateQuizStartSectionString() {
   return `  <div class="js-start" data-page-index="0">
-    <h2>Introduction</h2>
-    <hr class="line">
-    <div class="img-content">
-      <img src="https://www.nbc.com/sites/nbcunbc/files/files/styles/640x360/public/images/2016/1/19/MDot-TheOffice-640x360-MP.jpg?itok=Gn98SGYE" alt="The Office Crew">
-    </div>
-    <div class="name-content">
-      <p>Let's see how serious you are in joining us!</p>
-      <form id="js-start-form">
-        <div class="textinput">
-          <input id="firstname" class="js-first-name-input" type="text" name="first" required>
-          <label for="firstname">First Name</label>
-        </div>
-        <div class="textinput">
-          <input id="lastname" class="js-last-name-input" type="text" name="last" required>
-          <label for="lastname">Last Name</label>
-        </div>
-        <button type="submit" class="js-start-button">Start Questionaire</button>
-      </form>
-    </div>
-  </div>`;
+  <h2>Introduction</h2>
+  <div class="image-content">
+  </div>
+  <div class="name-content">
+    <p>Let's see how serious you are in joining us!</p>
+    <form id="js-start-form">
+      <div class="textinput">
+        <input id="firstname" class="js-first-name-input" type="text" name="first" required>
+        <label for="firstname">First Name</label>
+      </div>
+      <div class="textinput">
+        <input id="lastname" class="js-last-name-input" type="text" name="last" required>
+        <label for="lastname">Last Name</label>
+      </div>
+      <button type="submit" class="btn btn-primary js-start-button">Start Interview</button>
+    </form>
+  </div>
+</div>`;
 }
 
 /* ----------------------------------------------
@@ -239,19 +242,18 @@ function generateQuizResultSectionString() {
   } else {
     message = showFeedbackMessage('fail', percentCorrect);
   }
-  return `  <div class="js-result" data-page-index="0">
-    <h2>Results</h2>
-    <hr class="line">
-    <div class="img-content">
-      <img src="http://popgoestheweek.com/wp-content/uploads/2011/11/Dunder-Mifflin-Logo-Cast-the-office-28us-29-34267_1024_819.jpg" alt="Michael Scott of Dunder Mifflin Paper Company">
-    <div class="feedback-message">
-      ${message}
-    </div>
-    <form id="js-result-form">
-      <button type="submit" class="js-result-button">Try Again</button>
-    </form>
-    </div>
-  </div>`;
+  return `<div class="js-result" data-page-index="0">
+            <h5>Stats</h5>
+            <div class="img-content">
+              <!-- <img src="http://popgoestheweek.com/wp-content/uploads/2011/11/Dunder-Mifflin-Logo-Cast-the-office-28us-29-34267_1024_819.jpg" alt="Michael Scott of Dunder Mifflin Paper Company"> -->
+            <div class="feedback-message">
+              ${message}
+            </div>
+            <form id="js-result-form">
+              <button type="submit" class="btn btn-primary js-result-button">Try Again</button>
+            </form>
+            </div>
+          </div>`;
 }
 
 /* ----------------------------------------------
@@ -269,28 +271,14 @@ function generateProgressSectionString() {
   if (currentQuestion === 10) {
     large = 'large';
   }
-  return `<div class="progress" data-label="${percentageCompleted}% of the Questions Completed">
-            <span class="value" style="width: ${percentageCompleted}%"></span>
+  return `<div class="progress">
+            <div class="determinate"
+              style="width: ${percentageCompleted}%"
+              data-label="${percentageCompleted}% of the Questions Completed">
+            </div>
           </div>
-          <div class="progress-text">
-            <ul>
-              <li>
-                <span class="progress-name">${name}'s</span>
-                <span class="progress-name-text">Progress</span
-              </li>
-              <li>
-                <span class="span-label">Question:</span>
-                <div class="fraction ${large}">
-                  <span class="fractop">${currentQuestion}</span>&frasl;<span class="fracbot">10</span>
-                </div>
-              </li>
-              <li>
-                <span class="span-label">Correct:</span>
-                <div class="fraction">
-                  <span class="fractop">${correct}</span>&frasl;<span class="fracbot">10</span>
-                </div>
-              </li>
-            </ul>
+          <div class="stats-text">
+            ${name}: ${currentQuestion}/10 questions | ${correct}/10 correct answers
           </div>`;
 }
 
@@ -308,18 +296,18 @@ function showFeedbackMessage(message, percentCorrect = '') {
       html = `<p class="error">You have not selected an answer.<br>Please select an answer before submitting your answer.</p>`;
       break;
     case 'correct':
-      html = `<p class="correct">You have entered the correct answer!<br>Moving onto the next question...!</p>`;
+      html = `<p class="success">You have entered the correct answer!<br>Moving onto the next question...!</p>`;
       break;
     case `wrong`:
-      html = `<p class="wrong">You have entered an incorrect answer!<br>Let's do better on the next question...!</p>`;
+      html = `<p class="failure">You have entered an incorrect answer!<br>Let's do better on the next question...!</p>`;
       break;
     case 'again':
       html = `<p class="warning">Returning to the Introduction Page shortly...!</p>`;
       break;
     case 'pass':
-      return `<p class="correct">You have passed the Interview Questionaire with a ${percentCorrect}%!<br> Welcome to the team!</p>`;
+      return `<p class="success">You have passed the Interview Questionaire with a ${percentCorrect}%!<br> Welcome to the team!</p>`;
     case 'fail':
-      return `<p class="wrong">You have failed the Interview Questionaire with a ${percentCorrect}%!<br>Try again next time, ${name}!</p>`;
+      return `<p class="failure">You have failed the Interview Questionaire with a ${percentCorrect}%!<br>Try again next time, ${name}!</p>`;
   }
   $('.feedback-message').empty().append(html);
 }
@@ -331,7 +319,7 @@ function showCorrectAnswer(userAnswer, questionIndex, event) {
     $('.js-question').find(`[data-answer-index='${rightAnswer}']`).closest('li').removeClass('selected').addClass('correct-select');
   } else {
     $('.js-question').find(`[data-answer-index='${rightAnswer}']`).closest('li').addClass('correct-select');
-    $('.js-question').find('input:checked').closest('li').removeClass('selected').addClass('wrong-select');
+    $('.js-question').find('input:checked').closest('li').removeClass('selected').addClass('wrong-selected');
   }
 }
 

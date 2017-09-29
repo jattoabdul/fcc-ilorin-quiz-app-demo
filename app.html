@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="A quiz app about fcc challenges">
+  <title>FCC ILORIN QUIZ APP DEMO</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="blue-grey lighten-5">
+  <nav class="teal">
+      <div class="nav-wrapper container">
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="icon ion-navicon"></i></a>
+          <a href="index.html" class="brand-logo">
+              <i class="icon left ion-heart hide-on-small-only"></i> FCC QUIZ APP DEMO
+          </a>
+          <ul class="right hide-on-med-and-down">
+              <li>
+                  <a href="https://github.com/jattoabdul/fcc-ilorin-quiz-app-demo"
+                    class="waves-effect waves-light" target="_blank">
+                    <i class="icon ion-social-github left"></i>Github
+                  </a>
+              </li>
+              <li><a href="#!" class="waves-effect">Home</a></li>
+              <li><a href="#!">LeadersBoard</a></li>
+          </ul>
+          <ul id="slide-out" class="side-nav">
+              <li><a href="https://github.com/jalasem/materializecss_starter"><i class="icon ion-social-github"></i>Github</a></li>
+              <li><a href="#!">Home</a></li>
+              <li>
+                  <div class="divider"></div>
+              </li>
+              <li><a class="waves-effect" href="#!">LeadersBoard</a></li>
+          </ul>
+      </div>
+  </nav>
+  <section class="main container">
+    <!-- Intro & Registration Form -->
+    <div class="js-start" data-page-index="0">
+        <h2>Introduction</h2>
+        <div class="name-content">
+          <p>Let's see how serious you are in joining us!</p>
+          <form id="js-start-form">
+            <div class="textinput">
+              <input id="firstname" class="js-first-name-input" type="text" name="first" required>
+              <label for="firstname">First Name</label>
+            </div>
+            <div class="textinput">
+              <input id="lastname" class="js-last-name-input" type="text" name="last" required>
+              <label for="lastname">Last Name</label>
+            </div>
+            <button type="submit" class="btn btn-primary js-start-button">Start Interview</button>
+          </form>
+        </div>
+      </div>
+    <!-- Question  & Answers -->
+    <div class="js-question">
+      <h3><span class="question-number">1. </span>Question Text</h3>
+      <div class="feedback-message success">
+        Correct answer!
+      </div>
+      <form id="js-question-form">
+        <ul>
+          <li class="js-choices">
+            <div><input type="radio" class="js-radio" id="answer1"
+              name="answer" value="choice1" data-answer-index="1"
+              required="required">
+              <label for="answer1">Choice1</label>
+              </div>
+
+              <div><input type="radio" class="js-radio" id="answer2"
+              name="answer" value="choice2" data-answer-index="2"
+              required="required">
+              <label for="answer2">Choice2</label>
+              </div>
+
+              <div><input type="radio" class="js-radio" id="answer3"
+              name="answer" value="choice3" data-answer-index="3"
+              required="required">
+              <label for="answer3">Choice3</label>
+              </div>
+
+              <div><input type="radio" class="js-radio" id="answer4"
+              name="answer" value="choice4" data-answer-index="4"
+              required="required">
+              <label for="answer4">Choice4</label>
+              </div>
+          </li>
+        </ul>
+      </form>
+      <button type="submit" class="btn btn-primary js-question-button">Submit Answer</button>
+    </div>
+    <!-- Result & Review(feedback Message) -->
+    <div class="js-result" data-page-index="0">
+      <h5>Stats</h5>
+      <div class="img-content">
+        <!-- <img src="http://popgoestheweek.com/wp-content/uploads/2011/11/Dunder-Mifflin-Logo-Cast-the-office-28us-29-34267_1024_819.jpg" alt="Michael Scott of Dunder Mifflin Paper Company"> -->
+      <div class="feedback-message failure">
+        You have not done well enough
+      </div>
+      <form id="js-result-form">
+        <button type="submit" class="btn btn-primary js-result-button">Try Again</button>
+      </form>
+      </div>
+    </div>
+    <div class="progress-section">
+      <!-- Progress / Results -->
+      <!-- progress bar -->
+      <div class="progress">
+          <div class="determinate" style="width: 20%"></div>
+        </div>
+        <div class="stats-text">Jatto Abdul: 2/10 questions | 1/10 correct answers</div>
+    </div>
+  </section>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <!-- <script src="js/index.js"></script> -->
+  <!-- <script src="js/app.js"></script> -->
+</body>
+
+</html>

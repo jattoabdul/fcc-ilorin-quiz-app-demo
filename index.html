@@ -14,7 +14,7 @@
 </head>
 
 <body class="blue-grey lighten-5">
-  <nav class="teal">
+  <nav id="top" class="teal">
       <div class="nav-wrapper container">
           <a href="#" data-activates="slide-out" class="button-collapse"><i class="icon ion-navicon"></i></a>
           <a href="index.html" class="brand-logo">
@@ -40,88 +40,23 @@
           </ul>
       </div>
   </nav>
-  <section class="main container">
-    <!-- Intro & Registration Form -->
-    <div class="js-start" data-page-index="0">
-        <h2>Introduction</h2>
-        <div class="name-content">
-          <p>Let's see how serious you are in joining us!</p>
-          <form id="js-start-form">
-            <div class="textinput">
-              <input id="firstname" class="js-first-name-input" type="text" name="first" required>
-              <label for="firstname">First Name</label>
-            </div>
-            <div class="textinput">
-              <input id="lastname" class="js-last-name-input" type="text" name="last" required>
-              <label for="lastname">Last Name</label>
-            </div>
-            <button type="submit" class="btn btn-primary js-start-button">Start Interview</button>
-          </form>
-        </div>
-      </div>
-    <!-- Question  & Answers -->
-    <div class="js-question">
-      <h3><span class="question-number">1. </span>Question Text</h3>
-      <div class="feedback-message success">
-        Correct answer!
-      </div>
-      <form id="js-question-form">
-        <ul>
-          <li class="js-choices">
-            <div><input type="radio" class="js-radio" id="answer1"
-              name="answer" value="choice1" data-answer-index="1"
-              required="required">
-              <label for="answer1">Choice1</label>
-              </div>
-
-              <div><input type="radio" class="js-radio" id="answer2"
-              name="answer" value="choice2" data-answer-index="2"
-              required="required">
-              <label for="answer2">Choice2</label>
-              </div>
-
-              <div><input type="radio" class="js-radio" id="answer3"
-              name="answer" value="choice3" data-answer-index="3"
-              required="required">
-              <label for="answer3">Choice3</label>
-              </div>
-
-              <div><input type="radio" class="js-radio" id="answer4"
-              name="answer" value="choice4" data-answer-index="4"
-              required="required">
-              <label for="answer4">Choice4</label>
-              </div>
-          </li>
-        </ul>
-      </form>
-      <button type="submit" class="btn btn-primary js-question-button">Submit Answer</button>
-    </div>
-    <!-- Result & Review(feedback Message) -->
-    <div class="js-result" data-page-index="0">
-      <h5>Stats</h5>
-      <div class="img-content">
-        <!-- <img src="http://popgoestheweek.com/wp-content/uploads/2011/11/Dunder-Mifflin-Logo-Cast-the-office-28us-29-34267_1024_819.jpg" alt="Michael Scott of Dunder Mifflin Paper Company"> -->
-      <div class="feedback-message failure">
-        You have not done well enough
-      </div>
-      <form id="js-result-form">
-        <button type="submit" class="btn btn-primary js-result-button">Try Again</button>
-      </form>
-      </div>
-    </div>
+  <main id="main" class="row" role="main">
+    <section class="main container">
+      <!-- Intro & Registration Form -->
+      
+      <!-- Question  & Answers -->
+      
+      <!-- Result & Review(feedback Message) -->
+    </section>
     <div class="progress-section">
-      <!-- Progress / Results -->
-      <!-- progress bar -->
-      <div class="progress">
-          <div class="determinate" style="width: 20%"></div>
-        </div>
-        <div class="stats-text">Jatto Abdul: 2/10 questions | 1/10 correct answers</div>
+      <!-- Progress bar / Progress / Results -->
+    
     </div>
-  </section>
+  </main>
   <script src="js/jquery.min.js"></script>
   <script src="js/materialize.min.js"></script>
   <script src="js/index.js"></script>
-  <!-- <script src="js/app.js"></script> -->
+  <script src="js/app.js"></script>
 </body>
 
 </html>
