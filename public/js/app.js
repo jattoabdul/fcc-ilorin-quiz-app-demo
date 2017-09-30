@@ -5,62 +5,71 @@
 |_______________________________________________*/
 
 const QUESTIONS = [
-  {question: "Who does Michael accidentally hit with his car in the parking lot?", 
-    choices: ['Meredith', 'Phyllis', 'Ryan', 'Kelly'], 
-    answer: 0
-  },
-  {question: "On the night Pam got really drunk at the Dundies and kissed Jim, what did she win her Dundie for?", 
-    choices: ['Best Employee', 'Longest Engagement', 'Tidiest Desk', 'Whitest sneakers'], 
+  {question: "JSON name/value pair is written as?", 
+    choices: ['name’ : ‘value’',
+              'name = ‘value’',
+              'name = “value”',
+              '“name” : “value”'], 
     answer: 3
   },
-  {question: 'According to "Prison Mike", what is the worst thing about prison?', 
-    choices: ['The orcs', 'The dementors', 'The goblins', 'The banshees'], 
+  {question: "JSON strings have to be in?", 
+    choices: ['single quote', 'double quote', 'single quote or double quote', 'none of the above'], 
     answer: 1
   },
-  {question: "What is the name of the company Ryan sets up that sends messages to all of your devices at once?", 
-    choices: ['Wuphf', 'Barkk', 'Grrowl', 'Meeow'], 
-    answer: 0
-  },
-  {question: "What does Michael pick as his username when he signs up for an online dating site?", 
-    choices: ['LittleKidLover', 'WorldsBestBoss', 'HappyCuddler', 'IAmTheBoss'], 
-    answer: 0
-  },
-  {question: "How long had Jim and Pam been dating when he bought her engagement ring?", 
-    choices: ['A day', 'A week', 'A month', 'A year'], 
+  {question: 'Which of the following is not a JSON type?', 
+    choices: ['Object', 'date', 'Array', 'string'], 
     answer: 1
   },
-  {question: 'What is the name of "the senator", who Angela marries, but is actually gay and has an affair with Oscar?', 
-    choices: ['Randy', 'Richard', 'Robert', 'Rick'],
-    answer: 2
-  },
-  {question: "Which country does Toby move to when he leaves his job at Dunder Mifflin, only to return later?", 
-    choices: ['Cuba', 'Jamaica', 'Guam', 'Costa Rica'], 
+  {question: "What is the file extension of JSON?", 
+    choices: ['.jn', '.js', '.jsn', '.json'], 
     answer: 3
   },
-  {question: "What is the name of Angela's cat, which Dwight kills by putting it in the freezer?", 
-    choices: ['Bandit', 'Tinkerbell', 'Sprinkles', 'Button'], 
+  {question: "In modern websites what is the common usage for JSON?", 
+    choices: ['To store information remotely', 'To send and receive bits of data.', 'To store information locally.', 'None of the above'], 
+    answer: 1
+  },
+  {question: "Which of these is a benefit JSON has over XML?", 
+    choices: ['JSON is more forgiving of poor formatting',
+      'JSON has less markup requirements and therefore is lighter than XML',
+      'JSON can be written poorly and still be parsed',
+      'JSON does not need to be stored in a file to be sent remotely'], 
+    answer: 1
+  },
+  {question: 'What does JSON stand for?', 
+    choices: ['JavaScript Object Nomenclature',
+      'JavaScript Objective Notation',
+      'JavaScript Object Notation',
+      'JavaScript Orientated Nomenclature'],
     answer: 2
   },
-  {question: "According to Dwight, nostalgia is one of the greatest human weaknesses, second only to what?", 
-    choices: ['Emotion', 'The eyes', 'The neck', 'The legs'], 
+  {question: "JSON elements are separated by?", 
+    choices: ['semi-colon', 'line break', 'comma', 'white space'], 
     answer: 2
+  },
+  {question: "What keywords are reserved in JSON and cannot be used as keys?", 
+    choices: ['Value', 'Object', 'There are none.', 'Key'], 
+    answer: 2
+  },
+  {question: "Which of these data interchange formats has seen a decline in usage in favor of JSON?", 
+    choices: ['ASCII', 'Plain-text', 'SQL', 'XML'], 
+    answer: 3
   }
 ];
 
 const SESSION = {
   person: {first: '', last: ''},
   pages: [
-    'Start', 
-    {questionIndex: 0}, 
-    {questionIndex: 1}, 
-    {questionIndex: 2}, 
-    {questionIndex: 3}, 
-    {questionIndex: 4}, 
-    {questionIndex: 5}, 
-    {questionIndex: 6}, 
-    {questionIndex: 7}, 
-    {questionIndex: 8}, 
-    {questionIndex: 9}, 
+    'Start',
+    {questionIndex: 0},
+    {questionIndex: 1},
+    {questionIndex: 2},
+    {questionIndex: 3},
+    {questionIndex: 4},
+    {questionIndex: 5},
+    {questionIndex: 6},
+    {questionIndex: 7},
+    {questionIndex: 8},
+    {questionIndex: 9},
     'Result'],
   currentPage: 0,
   answers: [],
@@ -305,7 +314,7 @@ function showFeedbackMessage(message, percentCorrect = '') {
       html = `<p class="warning">Returning to the Introduction Page shortly...!</p>`;
       break;
     case 'pass':
-      return `<p class="success">You have passed the Interview Questionaire with a ${percentCorrect}%!<br> Welcome to the team!</p>`;
+      return `<p class="success">You have passed the Interview Questionaire with a ${percentCorrect}%!<br> Welcome to the team, ${name}!</p>`;
     case 'fail':
       return `<p class="failure">You have failed the Interview Questionaire with a ${percentCorrect}%!<br>Try again next time, ${name}!</p>`;
   }
@@ -406,30 +415,6 @@ function handleResultFormSubmit() {
     }, 2200);
   });
 }
-
-// function handleTest() {
-//   $('footer').on('click', '.js-test-button', function(event) {
-//     event.preventDefault();
-//     const pageRequest = $('.page-request').val();
-//     let dummySession = {person: {first: 'Test', last: 'Dummy'},
-//                         currentPage: pageRequest,
-//                         answers: [],
-//                         correct: 3,
-//                         incorrect: 2
-//                       };
-//     let questionRequest = '';
-//     if (pageRequest === 0) {
-//       questionRequest = 0
-//     } else {
-//       questionRequest = pageRequest - 1;
-//     }
-//     for (let i = 0; i < questionRequest; i++) {
-//       dummySession.answers.push('1');
-//     }
-//     setDummySession(dummySession);
-//     renderQuiz();
-//   });
-// }
 
 /* ----------------------------------------------
 |   

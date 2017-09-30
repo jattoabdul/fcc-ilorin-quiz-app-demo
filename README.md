@@ -30,6 +30,12 @@ I will love your contributions on this project. Ranging from typos to bug fixes 
 
 **After your pull request is merged**, you can safely delete your branch.
 
+## How to run
+
+```bash
+	npm install
+	node server
+```
 ### Suggestions
 Yeah! Let's discuss it. Send an e-mail to Aminujatto Abdulqahhar at jattoade@gmail.com or create an issue .
 

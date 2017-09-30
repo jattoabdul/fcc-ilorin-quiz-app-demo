@@ -79,6 +79,18 @@ li.js-choices {
     margin: 15px 0px;
 }
 
+.selected {
+    color: #007932;
+}
+
+.correct-select {
+    color: #009688;
+}
+
+.wrong-selected {
+    color: #FF9800;
+}
+
 .stats-text {
     color: rgba(96, 125, 139, 0.84);
 }
